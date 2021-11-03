@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 import {menuData} from'../data/MenuData';
 import {Button} from './Button';
 import {FaBars} from 'react-icons/fa';
-const Navbar = () => {
+const Navbar = ({toggle}) => {
     return (
         <Nav>
             <Logo to="/">companyName</Logo>
-            <MenuBars>
+            <MenuBars onClick={toggle}>
                 {menuData.map((item,index)=>
                     <NavMenuLinks to={item.link}
                     key={index}>
